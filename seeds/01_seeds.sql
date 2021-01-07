@@ -6,11 +6,12 @@ VALUES
   ('Hansel', 'hansel@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
   ('Shirley', 'shirley@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
 
-INSERT INTO properties (owner_id, title, description, thumbnail_photo_art, cover_photo_art, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code)
+INSERT INTO properties (
+    title, description, owner_id, cover_photo_url, thumbnail_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, active, province, city, country, street, post_code)
 VALUES
-  ('1', 'The Pad', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 530, 20, 5, 6, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3'),
-  ('2', 'The Settler', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 250, 20, 2, 4, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3'),
-  ('3', 'The Struggle', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 75, 20, 1, 1, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3');
+  ('The Pad', 'description', '1', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 530, 20, 5, 6, true, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3'),
+  ('The Settler', 'description', '2', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 250, 20, 2, 4, true, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3'),
+  ('The Struggle', 'description', '3', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 75, 20, 1, 1, true, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3');
 
   INSERT INTO reservations (start_date, end_date, property_id, guest_id)
   VALUES
