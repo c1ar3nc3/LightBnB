@@ -1,0 +1,25 @@
+INSERT INTO users (name, email, password)
+VALUES
+  ('Bob', 'bob@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+  ('Fred', 'fred@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+  ('Alice', 'alice@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+  ('Hansel', 'hansel@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+  ('Shirley', 'shirley@email.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+
+INSERT INTO properties (owner_id, title, description, thumbnail_photo_art, cover_photo_art, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code)
+VALUES
+  ('1', 'The Pad', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 530, 20, 5, 6, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3'),
+  ('2', 'The Settler', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 250, 20, 2, 4, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3'),
+  ('3', 'The Struggle', 'description', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg', 75, 20, 1, 1, 'Canada', '123 Banff ave', 'Banff', 'Alberta', 'A1B2C3');
+
+  INSERT INTO reservations (start_date, end_date, property_id, guest_id)
+  VALUES
+  ('2021-01-01', '2021-01-08', 1, 1),
+  ('2021-01-23', '2021-01-30', 2, 2),
+  ('2021-02-10', '2021-02-15', 3, 3);
+
+  INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message)
+  VALUES
+  (1, 1, 4, 5, 'Best prices in Banff!'),
+  (2, 2, 5, 3, 'Yummy breakfast'),
+  (3, 3, 6, 1, 'funny smell, has mice');
